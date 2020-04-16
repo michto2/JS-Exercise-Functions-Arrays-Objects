@@ -16,6 +16,9 @@ function addNumbers(num1, num2) {
   return num1 + num2;
 }
 
+console.log(3,4);
+
+
 // ⭐️ Example Challenge end ⭐️
 
 
@@ -34,10 +37,15 @@ function addNumbers(num1, num2) {
  * passing 'Andy' as the argument,
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
+ * 
+ * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+ return (`Goodbye, ${name}. Have a great day.`);
 }
+sayGoodbye('Michelle');
+
+
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -51,11 +59,15 @@ function sayGoodbye(/* code here */) {
  * the returned value should be: 75
  * 
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
- * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
+ * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. - Math.round
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(celsius) {
+  const celsiusTemp = celsius;
+  const cToF = celsiusTemp *9/5 + 32;
+  return Math.round (cToF);
 }
+temperatureCtoF(24);
+
 
 /**
  * ### Challenge `temperatureInF`
@@ -74,8 +86,9 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temp) {
+  
+
 }
 
 
@@ -86,6 +99,7 @@ function temperatureInF(/* code here */) {
  * This function should take an id, a name and an email as arguments,
  * and return an object with `id`, `name` and `email` properties.
  * 
+ * 
  * For example, if we invoke `makePersonObject`
  * passing 5, 'Leia' and 'leia@leia.com' as arguments,
  * the returned value should look like:
@@ -95,9 +109,11 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  return {id, name, email};
 }
+
+console.log(makePersonObject(5, 'michelle', 'michelle@gmail'));
 
 /**
  * ### Challenge `getName`
@@ -112,9 +128,11 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(id, name, email) {
+  return `Hello, my name is ${name}`;
 }
+
+console.log(getName(5,'Michelle', 'michelle@gmail'));
 
 
 /**
