@@ -88,9 +88,14 @@ temperatureCtoF(24);
 */
 function temperatureInF(temp) {
   
-
 }
 
+function temperatureCtoF(celsius) {
+  const celsiusTemp = celsius;
+  const cToF = celsiusTemp *9/5 + 32;
+  return Math.round (cToF);
+}
+temperatureCtoF(24);
 
 /**
  * ### Challenge `makePersonObject`
